@@ -1,0 +1,239 @@
+.menuToggle {
+    position: fixed;
+    width: 30px;
+    height: 25px;
+    z-index: 100;
+    left: 25pt;
+    transform: translate( 0 , -50% ) scale(1.5);
+    top: 50%;
+    cursor: pointer;
+    -webkit-transition: opacity .25s;
+    transition: opacity .25s;
+}
+
+.menuToggle span {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    background: #00ffbf;
+    transition: all .35s ease;
+}
+
+.top {
+    top: 0px;
+}
+
+.menuToggle:hover .top, .animateToggle .top {
+    top: 2px;
+}
+
+.menuToggle.active:hover .top {
+    top: 0px
+}
+
+.middle {
+    top: 10px;
+}
+
+.bottom {
+    top: 20px;
+}
+
+.menuToggle:hover .bottom, .animateToggle .bottom {
+    top: 18px;
+}
+
+.menuToggle.active:hover .bottom {
+    top: 20px;
+}
+
+.menuToggle.active .top {
+    -webkit-transform: translateY(10px) translateX(0) rotate(45deg);
+    transform: translateY(10px) translateX(0) rotate(45deg);
+    background: white;
+    background-color: #1e1e2e;
+}
+
+.menuToggle.active .middle {
+    opacity: 0;
+}
+
+.menuToggle.active .bottom {
+    -webkit-transform: translateY(-10px) translateX(0) rotate(-45deg);
+    transform: translateY(-10px) translateX(0) rotate(-45deg);
+    background: white;
+    background-color: #1e1e2e;
+}
+
+.menuToggle.active {
+    right: 35px;
+}
+
+.menuWrapper{
+    position: absolute;
+    width:100vw;
+    min-width:100pt;
+    height:75%;
+    top:12.5%;
+    transition: all 750ms ease-out;
+    transform:translate(-99vw , 0);
+    background: #25a9e0;
+    z-index:10;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.container.showMenu .pageWrapper{
+    /*transform: translate(20vw , 0);*/
+}
+
+.container.showMenu .menuWrapper{
+    transform: none;
+}
+
+.menuTitle{
+    flex:1;
+    width:100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    letter-spacing:0.1rem;
+    transform: rotateZ(90deg);
+    height:35%;
+}
+
+.menuTitle h1{
+    color: #1e1e2e;
+    font-family:'Eczar', serif;
+    font-size:3.7rem;
+    font-weight:600;
+    margin-right: 20pt;
+    width:250%;
+    position: absolute;
+    text-align: center;
+    border-bottom: 2pt solid black;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.padding{
+    flex:0.5;
+}
+
+.itemContainer{
+    flex:7;
+    width:80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-around;
+    height: 80%;
+}
+
+.itemContainer section{
+    flex:1;
+    min-width:25%;
+    max-width:25%;
+    height: 40%;
+    margin: 2%;
+    background: rgba(30, 30, 46, 0.95);
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.itemContainer section:hover{
+    background: #1e1e2e;
+}
+
+.itemOverlay{
+    position: relative;
+    height:100%;
+    width:100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    trasition: all 300ms ease;
+}
+
+.itemOverlay:hover{
+    background: rgba(86, 86, 153, 0.8);
+}
+
+.itemBox{
+    flex:1;
+    border:1pt solid white;
+    height:calc( 100% - 10pt );
+    margin:10pt;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.itemBox h1{
+    color:white;
+    font-family: 'Eczar', serif;
+    font-size:2rem;
+    font-weight:500;
+    letter-spacing: 0.1rem;
+    text-align:center;
+}
+
+.navigationLinks{
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.itemContainer section:nth-child(1){
+    background: url(gmrt.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.itemContainer section:nth-child(2){
+    background: url(smart-parking.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.itemContainer section:nth-child(3){
+    background: url(irrigation.png) no-repeat center center;
+    background-size: cover;
+}
+
+.itemContainer section:nth-child(4){
+    background: url(AirPolution.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.itemContainer section:nth-child(5){
+    background: url(water.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.itemContainer section:nth-child(6){
+    background: url(Smart-Light.png) no-repeat center center;
+    background-size: cover;
+}
+
+.navLogo{
+    position: absolute;
+    transform: rotateZ(90deg);
+    width: 5%;
+    right: 13%;
+}
+
+
+
+@media screen and (max-width: 990px) and (min-device-width:500px){
+    .menuTitle h1{
+        font-size:2.6rem;
+        height:60%;
+    }
+    .itemBox h1{
+        font-size:1.5rem;
+    }
+}

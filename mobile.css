@@ -1,0 +1,151 @@
+@media screen and (orientation: portrait) and (max-device-width: 480px){
+    .menuToggle{
+        transform: scale(1.75);
+        left:50px;
+        top:50px;
+    }
+
+    .menuWrapper{
+        width:100%;
+        transform:translate( -100vw , 0 );
+        transition: all 300ms ease;
+    }
+
+    .padding{
+        display: none;
+    }
+
+    .menuTitle{
+        display: none;
+    }
+
+    .container.showMenu .pageWrapper{
+        transform: translate( 100vw , 0 );
+    }
+
+    .menuTitle{
+        height:90pt;
+    }
+
+    .menuTitle h1,
+    .itemBox h1{
+        font-size:4rem;
+    }
+
+    .itemContainer{
+        flex-wrap: nowrap;
+        flex-direction:column;
+        height:200vh;
+        width:100%;
+    }
+
+    .itemContainer section{
+        height:45vw;
+        flex-direction: column;
+        min-width: 60%;
+        max-width: 60%;
+    }
+
+    .itemContainer section:nth-child(1){
+        margin-top: 85vh;
+    }
+
+    .aboutUsTitle h1{
+        font-size:6rem;
+    }
+    .aboutUsText p{
+        font-size: 1.6rem;
+    }
+
+    .logo{
+        opacity: 0.5;
+        width: 25%;
+    }
+
+    .teamSections.open .teamCardTitle{
+        font-size: 3rem;
+    }
+    .testimonialSection, .testimonialElements{
+        margin:20pt 0;
+    }
+
+    .testimonialWrapper{
+        height:200vh;
+    }
+
+    .testimonialSection .textCard{
+        width:100% !important;
+        left:-25% !important;
+        z-index:4 !important;
+        text-align: center !important;
+        background: rgba(255,255,255,0.75) !important;
+        top: 0 !important;
+    }
+
+    .testimonialSection:first-child{
+        margin:15vh 0 5vh !important;
+    }
+
+    .testimonialSection .bgCard{
+        display: none;
+    }
+
+    .testimonialSection .textCard h1{
+        font-size: 2.5rem !important;
+        margin:15pt 0 !important;
+    }
+
+    .testimonialTitle h1{
+      font-size: 5rem;
+    }
+
+    .centerBeam{
+      width: 75%;
+    }
+
+    .testimonialSection .textCard p{
+        font-size:1.3rem !important;
+    }
+
+    .testimonialSection .imgCard{
+        width: 101% !important;
+        height: 100% !important;
+        right: -26% !important;
+        background-size: cover !important;
+        top: -10% !important;
+        background-position: center center  !important;
+    }
+
+    .testimonialSection:nth-child(3) .imgCard,
+    .testimonialSection:nth-child(5) .imgCard{
+        left:-25% !important;
+    }
+
+    .testimonialSection:nth-child(3) .textCard,
+    .testimonialSection:nth-child(5) .textCard{
+        left:25% !important;
+    }
+
+    .centerBeam{
+        height:175vh !important;
+    }
+
+    .footer{
+        flex-direction:column;
+    }
+    .info, .contact{
+        width:100%;
+    }
+    .znet{
+        max-width:25%;
+        top: 7vh;
+    }
+
+    .galleryContainer{
+      height:125vh;
+    }
+    
+    #gallery{
+        height: 100vh !important;
+    }
+}
